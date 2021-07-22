@@ -33,6 +33,7 @@ int main() {
 	a_race = random_race();
 	a_class = random_class();
 	cout << a_race <<  " " << a_class << endl;
+	roll_abilities(abilities);
 	for (int i = 0; i < 6; i++) {
 		int number = abilities[i];
 		cout << number << endl;
