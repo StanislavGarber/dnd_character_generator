@@ -19,6 +19,12 @@ string random_class() {
 }
 
 
+void roll_abilities(int abilities[]) {
+	for (int i = 0; i < 6; i++) {
+		int roll_3d6 = throw_dices(3, 6);
+		abilities[i] = roll_3d6;
+	}
+}
 
 
 int main() {
@@ -27,4 +33,8 @@ int main() {
 	a_race = random_race();
 	a_class = random_class();
 	cout << a_race <<  " " << a_class << endl;
+	for (int i = 0; i < 6; i++) {
+		int number = abilities[i];
+		cout << number << endl;
+	}
 }
