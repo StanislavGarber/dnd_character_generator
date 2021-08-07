@@ -2,22 +2,10 @@
 #include<time.h>
 #include<iostream>
 #include "dicebox.h"
+#include "character.h"
 using namespace std;
 
 int dices[7] = {4, 6, 8, 10, 12, 20, 100};
-
-string barbarian[6] = { "str", "con", "dex", "wis", "cha", "int" };
-string bard[6] = { "cha", "dex", "int", "wis", "str", "con" };
-string cleric[6] = { "wis", "con", "str", "int", "dex", "cha" };
-string druid[6] = { "wis", "con", "cha", "str", "int", "dex" };
-string fighter[6] = { "str", "con", "dex", "int", "wis", "cha" };
-string monk[6] = { "dex", "wis", "str", "int", "cha", "con" };
-string paladin[6] = { "str", "cha", "con", "dex", "int", "wis" };
-string ranger[6] = { "dex", "wis", "cha", "int", "con", "str" };
-string rogue[6] = { "dex", "int", "cha", "wis", "str", "con" };
-string sorcerer[6] = { "cha", "con", "wis", "int", "str", "dex" };
-string warlok[6] = { "cha", "con", "wis", "int", "str", "dex" };
-string wizard[6] = { "int", "con", "dex", "cha", "wis", "str" };
 
 string random_race() {
 	string common_races[7] = { "human", "dwarf", "high elf", "dark elf", "wood elf", "lightfoot halfing", "stout halfing"};
@@ -62,23 +50,19 @@ void roll_abilities(int abilities[]) {
 }
 
 
-class Character {
-public:
-	int str;
-	int con;
-	int dex;
-	int intl;
-	int wis;
-	int cha;
-};
+
+
 
 
 int main() {
 	srand(time(NULL));
 	string a_race, a_class;
+	Character a_character;
 	int abilities[6] = {};
 	a_race = random_race();
 	a_class = random_class();
 	cout << a_race <<  " " << a_class << endl;
+	a_character.race = a_race;
+	a_character.cls = a_class;
 	roll_abilities(abilities);
 }

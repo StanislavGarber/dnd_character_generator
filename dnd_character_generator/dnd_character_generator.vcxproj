@@ -141,9 +141,11 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="dicebox.cpp" />
+    <ClCompile Include="character.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dicebox.h" />
+    <ClInclude Include="character.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
